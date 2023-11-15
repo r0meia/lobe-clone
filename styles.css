@@ -56,6 +56,7 @@ h1 > span {
     font-size: 1.125rem;
     line-height: 1.625rem;
     margin-bottom: 2.5rem;
+    color: #333333;
 }
 .section-wrapper > img {
     border-radius: 25px;
@@ -83,6 +84,7 @@ h1 > span {
     justify-content: center;
     align-items: center;
 }
+
 .download-container > a {
     color: white;
     text-decoration: none;
@@ -142,4 +144,19 @@ footer {
 .footer-bottom > img {
     height: 18px;
     width: 68px;
+}
+@media only screen and (min-width: 768px) {
+    .section-wrapper > h1 {
+        font-size: 3.5rem;
+    }
+    .section-wrapper > h2 {
+        font-size: 3.5rem;
+        width: 400px;
+        margin-bottom: 48px;
+    }
+    .section-wrapper > p {
+        font-size: 1.5rem;
+        width: 550px;
+        line-height: 2.125rem;
+    }
 }
