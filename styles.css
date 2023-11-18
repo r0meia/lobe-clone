@@ -62,7 +62,8 @@ h1 > span {
     border-radius: 25px;
     width: 83vw;
     margin-top: 1rem;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    max-width: 960px;
 }
 .section-wrapper > img:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -93,9 +94,12 @@ h1 > span {
 }
 footer {
     padding: 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
 }
 .footer-all {
     border-top: 0.5px solid rgba(0, 0, 0, 2);
+    max-width: 1310px;
 }
 .footer-content {
     display: grid;
@@ -144,6 +148,15 @@ footer {
 .footer-bottom > img {
     height: 18px;
     width: 68px;
+}
+.navbar {
+    visibility: hidden;
+}
+.bars > p {
+    visibility: hidden;
+}
+svg {
+    position: absolute;
 }
 @media only screen and (min-width: 768px) {
     .section-wrapper > h1 {
@@ -203,5 +216,73 @@ footer {
     footer {
         padding: 0 5rem 3.75rem;
     }
+    .footer-column {
+        padding: 0 2rem 0 2rem;
+    }
+    .navbar {
+        visibility: visible;
+        display: flex;
+        gap: 2rem;
+    }
+    .navbar > a {
+        text-decoration: none;
+        color: #333333;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+    .bars {
+        background-color: #04DDb2;
+        height: 48px;
+        width: 130px;
+    }
+    .bars > p {
+        visibility: visible;
+        text-decoration: none;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 500;
+        position: absolute
+    }
+    path {
+        visibility: hidden;
+    }
 
 }
+@media only screen and (min-width: 1400px) {
+    .header-container {
+        padding: 0 5rem;
+    }
+    .navbar {
+        gap: 3rem;
+    }
+    .section-wrapper > h1 {
+        font-size: 4rem;
+    }
+    .section-wrapper > p {
+        font-size: 1.625rem;
+        width: 600px;
+    }
+    .section-wrapper > h2 {
+        font-size: 4rem;
+        width: 500px;
+    }
+    footer {
+        padding: 0;
+    }
+    .footer-all {
+        width: 1072px;
+
+    }
+    .footer-column {
+        padding: 0 3rem;
+    }
+    .footer-column-socials {
+        flex-direction: row;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 1900px) {
+    .footer-all {
+        width: 1310px;
+    }
+} 
